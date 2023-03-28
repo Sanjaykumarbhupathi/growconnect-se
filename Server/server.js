@@ -9,7 +9,7 @@ connectDB();
 PORT = process.env.PORT
 
 app.post('/signup', (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
     //save values to database
     res.send(200)
 });
