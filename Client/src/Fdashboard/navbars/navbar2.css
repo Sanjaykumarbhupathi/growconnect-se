@@ -1,0 +1,37 @@
+.navbar2 {
+  background-color: #008724;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-menu2 {
+  display: flex;
+}
+
+.navbar-end2 {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.navbar-end2 li {
+  margin-right: 20px;
+}
+
+.navbar-end2 li:last-child {
+  margin-right: 0;
+}
+
+.navbar-end2 a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar-end2 a:hover {
+  text-decoration: underline;
+}
