@@ -42,8 +42,10 @@ function Signin() {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    alert("Helllllooooo")
+    // event.preventDefault();
     // Add sign-in logic here
+    console.log(email, password, userType);
   };
 
   return (
