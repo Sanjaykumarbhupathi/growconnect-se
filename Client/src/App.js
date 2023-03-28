@@ -11,7 +11,8 @@ import Signin from './pages/signin';
 import Preloader from './components/preloader/preloader';
 import Fdashboard from './Fdashboard/Fdashboard';
 import Cdashboard from './Cdashboard/Cdashboard';
-
+import Adashboard from './Adashboard/Adashboard';
+import Sdashboard from './Sdashboard/Sdashboard';
 
 function App() {
 	const [isLoading, setIsLoading] = useState(true);
@@ -37,6 +38,8 @@ function App() {
 				<Route path='/signin' element={<Signin />} />
 				<Route path='/Fdashboard' element={<Fdashboard />} />
 				<Route path='/Cdashboard' element={<Cdashboard />} />
+				<Route path='/Sdashboard' element={<Sdashboard />} />
+				<Route path='/Adashboard' element={<Adashboard />} />
 
 
 			  </Routes>
