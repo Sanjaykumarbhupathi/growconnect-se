@@ -53,7 +53,7 @@ export const NavBtn = styled.nav`
 display: flex;
 align-items: right;
 margin-right: 10;
-padding: 5px 10px;
+padding: 20px 20px;
 /* Third Nav */
 /* justify-content: flex-end;
 width: 100vw; */
