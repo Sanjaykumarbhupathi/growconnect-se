@@ -27,7 +27,7 @@ return (
 	<>
 	<Nav>
 		<NavLink to='/Home'style={FaAlignLeft}>
-		<img src='./logo.png' alt='logo' style={{marginLeft:10}}/>
+		<div className='logo'><img src='./logo.png' alt='logo' style={{marginLeft:10,}}/></div>
         </NavLink>
 		<Bars />
 

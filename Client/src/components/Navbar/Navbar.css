@@ -5,6 +5,11 @@
   width: 100%;
 }
 
+.logo img {
+  margin-top: 20px;
+}
+
+
   .dropdown {
     position: relative;
     display: inline-block;
