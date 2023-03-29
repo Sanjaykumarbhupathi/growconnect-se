@@ -4,10 +4,11 @@ import customerIcon from './icons/consumer.png';
 import adminIcon from './icons/admin.png';
 import supplierIcon from './icons/seller.png';
 import defaultIcon from './icons/user.png';
+import { useNavigate } from 'react-router-dom';
 import './signup.css';
 
 function Signup() {
-	const [FirstNmae, setFirstName] = useState('');
+	const [FirstName, setFirstName] = useState('');
 	const [LastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,6 +16,8 @@ function Signup() {
   const [Phoneno, setPhoneno] = useState('');
   const [userType, setUserType] = useState('');
   const [icon, setIcon] = useState(defaultIcon);
+
+  const navigate = useNavigate();
 
   const handleRadioChange = (event) => {
     setUserType(event.target.value);
@@ -38,9 +41,42 @@ function Signup() {
   };
   
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Add sign-up logic here
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const formData ={
+      email:email,
+      password:password,
+      name:FirstName+" "+LastName,
+      mobile:Phoneno,
+      role:userType
+    }
+    try {
+      const response = await fetch('http://localhost:5001/signup', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      const data = await response.json();
+
+      console.log(response);
+      if(response.ok){
+
+        if(userType==='farmer'){
+          navigate('/Fdashboard');
+        }
+        else if(userType==='customer'){
+          navigate('/Cdashboard');
+        }
+        else{
+          navigate('/Sdashboard');
+        }
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
   
 
@@ -71,7 +107,7 @@ function Signup() {
         </div>
         <div>
           <label>First Name:</label>
-          <input type="text" value={FirstNmae} onChange={(e) => setFirstName(e.target.value)} />
+          <input type="text" value={FirstName} onChange={(e) => setFirstName(e.target.value)} />
         </div>
         <div>
           <label>Last Name:</label>

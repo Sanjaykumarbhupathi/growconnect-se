@@ -5,6 +5,8 @@ import customerIcon from './icons/consumer.png';
 import adminIcon from './icons/admin.png';
 import supplierIcon from './icons/seller.png';
 import defaultIcon from './icons/user.png';
+import { useNavigate } from 'react-router-dom';
+
 import './signin.css';
 import Signup from './signup';
 import { Link } from 'react-router-dom';
@@ -15,6 +17,7 @@ function Signin() {
   const [userType, setUserType] = useState('');
   const [icon, setIcon] = useState(defaultIcon);
   const [passwordShown, setPasswordShown] = useState(false);
+  const navigate = useNavigate();
 
   const handleRadioChange = (event) => {
     setUserType(event.target.value);
@@ -41,11 +44,41 @@ function Signin() {
     setPasswordShown(!passwordShown);
   };
 
-  const handleSubmit = (event) => {
-    alert("Helllllooooo")
-    // event.preventDefault();
-    // Add sign-in logic here
-    console.log(email, password, userType);
+  const handleSubmit = async (event) => {
+    // alert("Helllllooooo")
+    event.preventDefault();
+  // Add sign-in logic here
+  const formData ={
+    email:email,
+    password:password,
+  }
+  try {
+    const response = await fetch('http://localhost:5001/login', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    const data = await response.json();
+
+    console.log(data);
+    if(response.ok){
+      const userType=data.type;
+      if(userType==='farmer'){
+        navigate('/Fdashboard');
+      }
+      else if(userType==='customer'){
+        navigate('/Cdashboard');
+      }
+      else{
+        navigate('/Sdashboard');
+      }
+    }
+  } catch (error) {
+    console.error(error);
+  }
   };
 
   return (
