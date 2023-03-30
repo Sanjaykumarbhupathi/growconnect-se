@@ -1,9 +1,9 @@
 import React from 'react'
 
-function viewproducts() {
+function Viewproducts() {
     return (
         <div>viewproducts</div>
     )
 }
 
-export default viewproducts
+export default Viewproducts
