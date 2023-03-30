@@ -6,8 +6,8 @@ function Navbar2() {
         <nav className="navbar2">
       <div className="navbar-menu2">
         <ul className="navbar-end2">
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Transactions</a></li>
+          <li><a href="./products">Products</a></li>
+          <li><a href="./CTransactions">Transactions</a></li>
         </ul>
       </div>
     </nav>

@@ -17,7 +17,12 @@ import Addproducts from './Fdashboard/pages/Addproducts';
 import Viewproducts from './Fdashboard/pages/viewproducts';
 import FTransactions from './Fdashboard/pages/FTransactions';
 import Viewpesticides from './Fdashboard/pages/ViewPesticides';
-
+import Addfarmers from './Adashboard/pages/Addfarmers';
+import DeleteCustomers from './Adashboard/pages/DeleteCustomers';
+import Deletefarmers from './Adashboard/pages/Deletefarmers';
+import DeleteSuppliers from './Adashboard/pages/DeleteSuppliers';
+import Products from './Cdashboard/pages/products';
+import CTransactions from './Cdashboard/pages/CTransactions';
 //GrowConnect
 
 function App() {
@@ -50,6 +55,12 @@ function App() {
 				<Route path='/Fdashboard/ViewProducts' element={<Viewproducts/>}/>
 				<Route path='/Fdashboard/FTransactions' element={<FTransactions/>}/>
 				<Route path='/Fdashboard/Viewpesticides' element={<Viewpesticides/>}/>
+				<Route path='/Adashboard/Addfarmers' element={<Addfarmers/>}/>
+				<Route path='/Adashboard/Deletefarmers' element={<Deletefarmers/>}/>
+				<Route path='/Adashboard/Deletecustomers' element={<DeleteCustomers/>}/>
+				<Route path='/Adashboard/Deletesuppliers' element={<DeleteSuppliers/>}/>
+				<Route path='/Cdashboard/products' element={<Products/>}/>
+				<Route path='/Cdashboard/CTransactions' element={<CTransactions/>}/>
 
 
 			  </Routes>

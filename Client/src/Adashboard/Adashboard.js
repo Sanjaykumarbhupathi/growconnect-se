@@ -6,6 +6,7 @@ function Adashboard() {
     return (
         <><Navbar1 />
         <Navbar2/>
+        <div>hello</div>
         </>
     )
 }

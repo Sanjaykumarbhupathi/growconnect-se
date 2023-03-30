@@ -6,11 +6,11 @@ function Navbar2() {
         <nav className="navbar2">
       <div className="navbar-menu2">
         <ul className="navbar-end2">
-          <li><a href="#">Add Farmers</a></li>
-          <li><a href="#">Delete Farmers</a></li>
-          <li><a href="#">Delete Customers</a></li>
-          <li><a href="#">Delete Sellers</a></li>
-          <li><a href="#">Total Transactions</a></li>
+          <li><a href="./AddFarmers">Add Farmers</a></li>
+          <li><a href="./deleteFarmers">Delete Farmers</a></li>
+          <li><a href="./deletecustomers">Delete Customers</a></li>
+          <li><a href="./deletesuppliers">Delete Suppliers</a></li>
+          <li><a href="./TTransactions">Total Transactions</a></li>
         </ul>
       </div>
     </nav>
