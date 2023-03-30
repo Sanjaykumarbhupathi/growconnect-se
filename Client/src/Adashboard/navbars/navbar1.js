@@ -6,7 +6,7 @@ function Navbar1() {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <span className="navbar-item">Seller Dashboard</span>
+        <span className="navbar-item">Admin Dashboard</span>
       </div>
       <div className="navbar-menu">
         <div className="navbar-end">

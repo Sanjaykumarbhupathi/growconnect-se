@@ -6,10 +6,10 @@ function Navbar2() {
         <nav className="navbar2">
       <div className="navbar-menu2">
         <ul className="navbar-end2">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Add Products</a></li>
+          <li><a href="#">View Products</a></li>
+          <li><a href="#">View Pesticides</a></li>
+          <li><a href="#">View Transactions</a></li>
         </ul>
       </div>
     </nav>

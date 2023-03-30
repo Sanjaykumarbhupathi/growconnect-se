@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Footer.css";
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"></link>
 
 function Footer() {
     return (

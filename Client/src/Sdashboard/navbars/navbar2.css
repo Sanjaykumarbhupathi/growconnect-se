@@ -9,14 +9,14 @@
 
 .navbar-menu2 {
   display: flex;
+  margin: 0 auto; /* added */
 }
 
 .navbar-end2 {
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: center;
-   
+  justify-content: center; 
 }
 
 .navbar-end2 li {

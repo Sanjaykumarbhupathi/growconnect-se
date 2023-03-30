@@ -3,6 +3,7 @@ import './Home.css';
 import myVideo from './icons/page3.mp4';
 import Navbar from '../components/Navbar';
 import Footer from '../components/footer/Footer';
+import TextCarousel from '../components/slider/TextCarsousel';
 
 function Home() {
 
@@ -19,6 +20,8 @@ function Home() {
           </div>
           <div>
             <h2 className='newsfeed'>Top News Feed</h2>
+            <TextCarousel/>
+            <br/>
 
           </div>
           <div>
