@@ -13,6 +13,10 @@ import Fdashboard from './Fdashboard/Fdashboard';
 import Cdashboard from './Cdashboard/Cdashboard';
 import Adashboard from './Adashboard/Adashboard';
 import Sdashboard from './Sdashboard/Sdashboard';
+import Addproducts from './Fdashboard/pages/Addproducts';
+import Viewproducts from './Fdashboard/pages/viewproducts';
+import FTransactions from './Fdashboard/pages/FTransactions';
+import Viewpesticides from './Fdashboard/pages/ViewPesticides';
 
 function App() {
 	const [isLoading, setIsLoading] = useState(true);
@@ -40,6 +44,10 @@ function App() {
 				<Route path='/Cdashboard' element={<Cdashboard />} />
 				<Route path='/Sdashboard' element={<Sdashboard />} />
 				<Route path='/Adashboard' element={<Adashboard />} />
+				<Route path='/Fdashboard/Addproducts' element={<Addproducts/>}/>
+				<Route path='/Fdashboard/ViewProducts' element={<Viewproducts/>}/>
+				<Route path='/Fdashboard/FTransactions' element={<FTransactions/>}/>
+				<Route path='/Fdashboard/Viewpesticides' element={<Viewpesticides/>}/>
 
 
 			  </Routes>

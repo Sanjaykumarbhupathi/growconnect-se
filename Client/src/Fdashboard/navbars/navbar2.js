@@ -1,6 +1,5 @@
 import React from 'react'
 import './navbar2.css';
-import viewpesticides from '../pages/viewpesticides';
 
 function Navbar2() {
     return (
@@ -10,7 +9,7 @@ function Navbar2() {
           <li><a href="./viewpesticides">View Pesticides</a></li>
           <li><a href="./viewproducts">View Products</a></li>
           <li><a href="./AddProducts">Add products</a></li>
-          <li><a href="./viewTransactions">View Transactions</a></li>
+          <li><a href="./FTransactions">FTransactions</a></li>
         </ul>
       </div>
     </nav>
