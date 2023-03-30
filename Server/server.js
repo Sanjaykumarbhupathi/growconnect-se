@@ -2,6 +2,7 @@ const express = require('express');
 const connectDB = require('./connect');
 const app = express();
 const authRoutes = require('./routes/Auth');
+const contact = require('./routes/contact')
 const cors = require('cors');
 
 
@@ -12,6 +13,7 @@ connectDB();
 PORT = process.env.PORT
 
 app.use('', authRoutes);
+app.use('', contact);
 // app.post('/signup', (req, res) => {
 //     console.log(req.body)
 //     //save values to database

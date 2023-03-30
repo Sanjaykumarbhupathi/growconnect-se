@@ -5,17 +5,34 @@ import Footer from '../components/footer/Footer';
 
 const Contact = () => {
   const [formStatus, setFormStatus] = React.useState('Send')
-  const onSubmit = (e) => {
-    e.preventDefault()
-    setFormStatus('Submitting...')
-    const { name, email, message } = e.target.elements
-    let conFom = {
-      name: name.value,
-      email: email.value,
-      message: message.value,
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    setFormStatus('Submitting...');
+  
+    const { name, email, message } = e.target.elements;
+  
+    try {
+      const response = await fetch('http://localhost:5001/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name: name.value, email: email.value, message: message.value }),
+      });
+  
+      if (response.ok) {
+        setFormStatus('Message sent!');
+        name.value = '';
+        email.value = '';
+        message.value = '';
+      } else {
+        setFormStatus('Error sending message');
+      }
+    } catch (error) {
+      console.error(error);
+      setFormStatus('Error sending message');
     }
-    console.log(conFom)
-  }
+  };
   return (
     <><Navbar/>
     <div className='contactpage'><div className="container mt-5">
@@ -37,7 +54,7 @@ const Contact = () => {
           <label className="form-label" htmlFor="message">
             Message
           </label>
-          <textarea className="form-control" id="message" required />
+          <textarea className="form-control" type="text" id="message" required />
         </div>
         <button className="btn btn-success" type="submit">
 
