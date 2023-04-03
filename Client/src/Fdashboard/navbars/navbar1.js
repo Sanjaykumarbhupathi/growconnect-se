@@ -1,6 +1,6 @@
 import React from 'react';
 import './navbar1.css';
-import { FaShoppingCart, FaSignOutAlt } from 'react-icons/fa';
+import { FaShoppingCart, FaSignOutAlt, FaUserAlt} from 'react-icons/fa';
 
 function Navbar1() {
   return (
@@ -10,6 +10,9 @@ function Navbar1() {
       </div>
       <div className="navbar-menu">
         <div className="navbar-end">
+          <a className="navbar-item">
+            <FaUserAlt />
+          </a>
           <a className="navbar-item">
             <FaShoppingCart />
           </a>

@@ -16,13 +16,14 @@ import Sdashboard from './Sdashboard/Sdashboard';
 import Addproducts from './Fdashboard/pages/Addproducts';
 import Viewproducts from './Fdashboard/pages/viewproducts';
 import FTransactions from './Fdashboard/pages/FTransactions';
-import Viewpesticides from './Fdashboard/pages/ViewPesticides';
+import Viewpesticides from './Fdashboard/pages/viewpesticides';
 import Addfarmers from './Adashboard/pages/Addfarmers';
 import DeleteCustomers from './Adashboard/pages/DeleteCustomers';
 import Deletefarmers from './Adashboard/pages/Deletefarmers';
 import DeleteSuppliers from './Adashboard/pages/DeleteSuppliers';
 import Products from './Cdashboard/pages/products';
 import CTransactions from './Cdashboard/pages/CTransactions';
+// import ProtectedRoute from './Protectedroutes';
 //GrowConnect
 
 function App() {
@@ -61,9 +62,8 @@ function App() {
 				<Route path='/Adashboard/Deletesuppliers' element={<DeleteSuppliers/>}/>
 				<Route path='/Cdashboard/products' element={<Products/>}/>
 				<Route path='/Cdashboard/CTransactions' element={<CTransactions/>}/>
-
-
 			  </Routes>
+			  {/* <ProtectedRoute path='/Fdashboard' isAuthenticated={true} element={<Fdashboard />} /> */}
 			</Router>
 		  </>
 		)}

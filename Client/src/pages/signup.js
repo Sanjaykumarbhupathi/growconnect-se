@@ -6,6 +6,9 @@ import supplierIcon from './icons/seller.png';
 import defaultIcon from './icons/user.png';
 import { useNavigate } from 'react-router-dom';
 import './signup.css';
+import { Link } from 'react-router-dom';
+import { FaAlignLeft, FaBorderNone,FaHome } from 'react-icons/fa';
+
 
 function Signup() {
 	const [FirstName, setFirstName] = useState('');
@@ -82,6 +85,10 @@ function Signup() {
 
   return (
     <>
+    <div style={{alignItems:FaAlignLeft, textDecoration:FaBorderNone, }}>
+      <button className='backhome'><Link to={'/'} ><FaHome/></Link></button>
+
+      </div>
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center", }}>
       <h2>Sign Up</h2>
        </div>

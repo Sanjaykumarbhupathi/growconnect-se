@@ -1,0 +1,61 @@
+body {
+background-color: #f2f2f2;
+}
+
+.new-form-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 50px;
+}
+
+.new-form-group {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+margin-bottom: 20px;
+}
+
+.new-form-group label {
+font-size: 16px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.new-form-group input[type="text"],
+.new-form-group input[type="number"],
+.new-form-group select {
+padding: 10px;
+font-size: 14px;
+border-radius: 5px;
+border: 1px solid #ccc;
+width: 100%;
+background-color: #fff;
+color: #333;
+}
+
+.new-form-group select {
+appearance: none;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235B965B'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6l-6-6l1.41-1.41z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+background-repeat: no-repeat;
+background-position: right 10px center;
+background-size: 20px 20px;
+padding-right: 30px;
+}
+
+.new-form-group input[type="submit"] {
+background-color: #5b965b;
+color: #fff;
+font-size: 16px;
+font-weight: bold;
+border: none;
+border-radius: 5px;
+padding: 10px 20px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.new-form-group input[type="submit"]:hover {
+background-color: #417d41;
+}

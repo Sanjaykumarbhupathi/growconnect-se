@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import { FaAlignLeft, FaBorderNone, FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaAlignLeft, FaBorderNone, FaEye, FaEyeSlash,FaHome } from 'react-icons/fa';
 import farmerIcon from './icons/farmer.png';
 import customerIcon from './icons/consumer.png';
 import adminIcon from './icons/admin.png';
 import supplierIcon from './icons/seller.png';
 import defaultIcon from './icons/user.png';
 import { useNavigate } from 'react-router-dom';
-
 import './signin.css';
 import Signup from './signup';
 import { Link } from 'react-router-dom';
@@ -72,6 +71,9 @@ function Signin() {
       else if(userType==='customer'){
         navigate('/Cdashboard');
       }
+      else if(userType==='admin'){
+        navigate('/Adashboard');
+      }
       else{
         navigate('/Sdashboard');
       }
@@ -84,7 +86,7 @@ function Signin() {
   return (
     <>
       <div style={{alignItems:FaAlignLeft, textDecoration:FaBorderNone, }}>
-      <button className='backhome'><a href='/'>Back to Home</a></button>
+      <button className='backhome'><Link to={'/'} ><FaHome/></Link></button>
 
       </div>
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center", }}>
